@@ -19,7 +19,7 @@ public class JenkinsTestController {
 
     @RequestMapping("/age")
     String name(@RequestParam("year") Integer year){
-        return "I'm "+ jenkinsTestService.getAge(year) + " years old";
+        return "I'm "+ jenkinsTestService.getAge(year) + " years old!";
     }
 
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class JenkinsTestController {
 
     @Autowired
-    private JenkinsTest jenkinsTest;
+    private JenkinsTestService jenkinsTestService;
 
     @RequestMapping("/name")
     String name(@RequestParam("name") String name){
@@ -19,7 +19,7 @@ public class JenkinsTestController {
 
     @RequestMapping("/age")
     String name(@RequestParam("year") Integer year){
-        return "I'm "+jenkinsTest.getAge(year)+" years old";
+        return "I'm "+ jenkinsTestService.getAge(year) + " years old";
     }
 
 }
